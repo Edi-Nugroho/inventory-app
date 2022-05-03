@@ -1,0 +1,521 @@
+@font-face{
+    font-family: Sora-SemiBold;
+    src: url('../template/webfonts/Sora-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: Poppins;
+    src: url('../template/webfonts/Poppins-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: Poppins-Medium;
+    src: url('../template/webfonts/Poppins-Medium.ttf');
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: #fff;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #fff;
+    color: #fff;
+    transition: all 0.3s;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    background: #fff;
+    color: black;
+
+}
+
+#sidebar ul.components {
+    border-bottom: 1px solid #E9E9E9;
+    font-size: 14px;
+}
+
+#sidebar ul p {
+    font-family: 'Poppins-Medium';
+    color: black;
+    padding: 12px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+#sidebar ul li a {
+    padding: 20px 10px;
+    font-size: 1.1em;
+    display: block;
+    color: black;
+    font-size: 13px;
+}
+
+#sidebar ul li a:hover {
+    color: black;
+    background: #F4F4F4;
+    border-left: 3px solid #009EFF;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: black;
+    background: #F4F4F4;
+    border-left: 3px solid #009EFF;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 25px !important;
+    background: #fff;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+.dashboard-card{
+    display: flex;
+    border-bottom: 1px solid #E9E9E9;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    justify-content: space-between;
+}
+
+.kotak{
+    flex: 1;
+    background-color: #FFF;
+    width: 265px;
+    height: 100px;
+    border-radius: 7px;
+    padding-left: 10px;
+    border-left: 3px solid #00C0EF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.kotak h6{
+    margin: 22px 0px 0px 10px;
+    color: #464646;
+    font-weight: bold;
+}
+
+.kotak .angka{
+    color: #464646;
+    font-size: 20px;
+    margin-top: 16px;
+    margin-left: 13px;
+}
+
+.kotak .data{
+    flex: 3;
+}
+
+.kotak .icon{
+    flex: 1;
+    margin: 32px 10px 0px 0px;
+}
+
+.kotak-1{
+    flex: 1;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: #FFF;
+    width: 265px;
+    height: 100px;
+    border-radius: 7px;
+    padding-left: 10px;
+    border-left: 3px solid #00C0EF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.kotak-1 h6{
+    margin: 22px 0px 0px 10px;
+    color: #464646;
+    font-weight: bold;
+}
+
+.kotak-1 .angka{
+    color: #464646;
+    font-size: 20px;
+    margin-top: 16px;
+    margin-left: 13px;
+}
+
+.kotak-1 .data{
+    flex: 3;
+}
+
+.kotak-1 .icon{
+    flex: 1;
+    margin: 32px 10px 0px 0px;
+}
+
+.table{
+    border: 1px solid #E9E9E9;
+    border-radius: 3px;
+}
+
+.table-data{
+    margin: 0px 30px 20px 30px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.table-data-input{
+    margin: 0px 30px 20px 30px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 14px;
+    border: 1px solid #E9E9E9;
+}
+
+input.form-control.form-control-sm{
+    margin-right: 0px;
+}
+
+.form-select{
+    font-size: 12px;
+}
+
+th.sorting{
+    color: #FFF;
+    background-color: #007BFF;
+    
+}
+
+.tr-1{
+    border-radius: 10px;
+}
+
+.tr-1 th{
+    border: none;
+
+}
+
+td{
+    color: #464646;
+    border: none;
+    margin-left: 20px;
+}
+
+tr{
+    color: #464646;
+    background: #FFF;
+    border: none;
+
+}
+
+.table-light{
+    background-color: #FFF;
+}
+
+.top-table{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.title-h4{
+    margin-left: 40px;
+}
+
+.table-data-input h6{
+    margin: 20px 19px 30px 19px;
+    font-weight: bold;
+}
+
+.form-label{
+    width: 160px;
+    margin-left: 20px;
+    color: #9E9E9E;
+    margin-top: 10px;
+}
+
+.form-control{
+    margin-right: 20px;
+}
+
+.form-select{
+    margin-right: 20px;
+}
+
+.button-group{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    justify-content: flex-end;
+    font-family: 'Poppins';
+}
+
+.datepicker{
+  border: 1px solid gray;
+}
+
+.datepicker-days th{
+  font-size: 14px;
+  padding: 10px 0px;
+  font-weight: normal;
+}
+
+.datepicker-days td{
+  padding: 10px 12px;
+  font-size: 12px;
+} 
+
+.datepicker-days td{
+  padding: 10px 12px;
+}   
+
+.datepicker-days .table-condensed td.active.day{
+  background: #0044CC;
+}
+
+select.form-select.form-select-sm{
+    margin: 0px 8px;
+}
+
+.detail-page{
+    width: auto;
+    border: 1px solid #E9E9E9;
+    margin: 10px 30px;
+}
+
+.detail-list{
+    margin: 0px 10px 10px 10px;
+}
+
+.detail-list a{
+    font-size: 14px;
+}
+
+.detail-title{
+    border-bottom: 1px solid #E9E9E9;
+    height: 50px;
+}
+
+.detail-title h6{
+    padding: 15px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table-detail{
+    margin: 10px 0px;
+    padding-left: 20px;
+    border: 1px solid #E9E9E9;
+}
+
+.table-detail th{
+    padding: 10px 0px;
+    background-color: #007BFF;
+    color: #FFF;
+}
+
+.table-detail td{
+    padding: 10px 0px;
+}
+
+.table-detail tr{
+    text-align: center;
+
+}
+
+.button-laporan{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.button-laporan a{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.button-laporan button{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.button-laporan input{
+    font-size: 14px;
+}
+
+input#datepicker.form-control{
+    width: 200px;
+    display: inline-block;
+    margin-right: 0px;
+}
+
+input#datepicker1.form-control{
+    width: 200px;
+    display: inline-block;
+    margin-right: 0;
+}
+
+.tgl{
+    display: inline-block;
+}
+
+.card-text{
+    font-size: 12px;
+}
+
+.staff-top{
+    display: flex;
+}
+
+.card-staff{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.h4-staff{
+    margin-left: 25px;
+}
+
+tr.tr-1{
+    background-color: #007bff;
+    color: #FFF;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
